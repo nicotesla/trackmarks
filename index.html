@@ -1,0 +1,254 @@
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Trackmarks</title>
+  <style>
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      background: #333;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 100%;
+      padding: 1rem;
+    }
+
+    section {
+      border-top: 1px #666 solid;
+      padding: 1rem 1rem 2rem;
+      max-width: 420px;
+      margin: auto;
+    }
+    section:first-of-type {
+      border: 0;
+    }
+    h1, h2 {
+      margin: 0 0 1rem;
+    }
+    h2 {
+      font-weight: normal;
+      font-size: 1rem;
+    }
+
+    input, textarea, button {
+      padding: 1rem;
+      font-size: 1rem;
+      width: 100%;
+      margin: 0 0 .5rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    textarea {
+      height: 18rem;
+    }
+    p {
+      margin: 0 0 1rem 0;
+      line-height: 1.5
+    }
+@media (min-width: 1200px) {
+  article {
+    display: inline-block;
+    vertical-align: top;
+  }
+  article:nth-of-type(1) {
+    width: 33%;
+  }
+  article:nth-of-type(2) {
+    width: 63%;
+    padding: 1rem  0 1rem 3%;
+  }
+  .container {
+    max-width: 63vw;
+    margin: auto;
+  }
+}
+.container {
+  position: relative;
+  z-index: 1;
+}
+.thing {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.thing>div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, #00bfff, #5a0083 100%);
+}
+
+.thing>div:nth-child(2) {
+    background: linear-gradient(to right, #5a0083, #00f7ff 100%);
+    -webkit-animation-name: animationOne;
+            animation-name: animationOne;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+.thing>div:nth-child(3) {
+    background: linear-gradient(to top, transparent, #5a0083 100%);
+    -webkit-animation-name: animationTwo;
+            animation-name: animationTwo;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+    header h1 {
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 1.5rem;
+      width: 100%;
+      text-align: center;
+      font-size: 4vw; 
+      color: #c8ff00;
+    }
+    @media (min-width: 1200px) {
+      header h1 {
+        font-size: 6vw; 
+        letter-spacing: 2rem;
+      }
+    }
+
+    audio {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  <header>
+    <h1>Trackmarks</h1>
+  </header>
+
+<article>
+  <section>
+    <h2>About the authors</h2>
+    <audio controls="">
+      <source src="mp3/About_the_Authors.mp3" type="audio/mp3">
+      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/About_the_Authors.mp3">link to the audio</a>
+        instead.</p>
+    </audio>
+  </section>
+  <section>
+    <h2>Country Roads</h2>
+    <audio controls="">
+      <source src="mp3/Country_Roads.mp3" type="audio/mp3">
+      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Country_Roads.mp3">link to the audio</a>
+        instead.</p>
+    </audio>
+  </section>
+  <section>
+    <h2>Everybody's Talking</h2>
+    <audio controls="">
+      <source src="mp3/Everybodys_Talking.mp3" type="audio/mp3">
+      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Everybodys_Talking.mp3">link to the audio</a>
+        instead.</p>
+    </audio>
+  </section>
+  <section>
+    <h2>Good Vibrations</h2>
+    <audio controls="">
+      <source src="mp3/Good_Vibrations.mp3" type="audio/mp3">
+      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Good_Vibrations.mp3">link to the audio</a>
+        instead.</p>
+    </audio>
+  </section>
+  <section>
+    <h2>Stairway to Heaven</h2>
+    <audio controls="">
+      <source src="mp3/Stairway_to_Heaven.mp3" type="audio/mp3">
+      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Stairway_to_Heaven.mp3">link to the audio</a>
+        instead.</p>
+    </audio>
+  </section>
+  <section>
+    <h2>Whole Lotta Shakin</h2>
+    <audio controls="">
+      <source src="mp3/Whole_Lotta_Shakin.mp3" type="audio/mp3">
+      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Whole_Lotta_Shakin.mp3">link to the audio</a>
+        instead.</p>
+    </audio>
+  </section>
+
+</article>
+<article>
+  <p>We’ve been locked in Joel’s basement now for months on end to create episodes of TrackMarks, and it’s getting a little musty in here.  Our theory is that all pop music revolves around songs, even more than albums and artists, and we’re picking ones we think deserve a close look.  You now belong to our test focus group. We need to know what you think. Please fill out the form below…</p>
+
+  <!-- modify this form HTML and place wherever you want your form -->
+<form id="my-form" action="https://formspree.io/f/mkgjvrzn" method="POST">
+  <input type="text" name="name" placeholder="Your Name"/>
+  <input type="email" name="email" placeholder="Your Email"/>
+  <textarea name="message" placeholder="Tell us what you think"></textarea>
+  <button id="my-form-button">Submit</button>
+  <p id="my-form-status"></p>
+</form>
+
+<!-- Place this script at the end of the body tag -->
+<script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
+
+
+</article>
+</div>
+
+<div class="thing">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+</body>
+
+</html>
