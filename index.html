@@ -155,7 +155,7 @@ const userFirstName = urlParams.get('fname');
 const userLastName = urlParams.get('lname');
 
 
-mixpanel.identify('userEmail')
+mixpanel.identify(userEmail)
  
 mixpanel.people.set({ 
   '$email': userEmail,
