@@ -4,285 +4,161 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Trackmarks</title>
-  <style>
-    html {
-      font-size: 16px;
-    }
-
-    body {
-      background: #333;
-      color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 100%;
-      padding: 1rem;
-    }
-
-    section {
-      border-top: 1px #666 solid;
-      padding: 1rem 1rem 2rem;
-      max-width: 420px;
-      margin: auto;
-    }
-    section:first-of-type {
-      border: 0;
-    }
-    h1, h2 {
-      margin: 0 0 1rem;
-    }
-    h2 {
-      font-weight: normal;
-      font-size: 1rem;
-    }
-
-    input, textarea, button {
-      padding: 1rem;
-      font-size: 1rem;
-      width: 100%;
-      margin: 0 0 .5rem;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    textarea {
-      height: 18rem;
-    }
-    p {
-      margin: 0 0 1rem 0;
-      line-height: 1.5
-    }
-@media (min-width: 1200px) {
-  article {
-    display: inline-block;
-    vertical-align: top;
-  }
-  article:nth-of-type(1) {
-    width: 33%;
-  }
-  article:nth-of-type(2) {
-    width: 63%;
-    padding: 1rem  0 1rem 3%;
-  }
-  .container {
-    max-width: 63vw;
-    margin: auto;
-  }
-}
-.container {
-  position: relative;
-  z-index: 1;
-}
-.thing {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.thing>div {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: linear-gradient(to right, #00bfff, #5a0083 100%);
-}
-
-.thing>div:nth-child(2) {
-    background: linear-gradient(to right, #5a0083, #00f7ff 100%);
-    -webkit-animation-name: animationOne;
-            animation-name: animationOne;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-}
-
-.thing>div:nth-child(3) {
-    background: linear-gradient(to top, transparent, #5a0083 100%);
-    -webkit-animation-name: animationTwo;
-            animation-name: animationTwo;
-    -webkit-animation-duration: 8s;
-            animation-duration: 8s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-}
-
-    header h1 {
-      text-transform: uppercase;
-      font-style: italic;
-      letter-spacing: 1.5rem;
-      width: 100%;
-      text-align: center;
-      font-size: 4vw; 
-      color: #c8ff00;
-    }
-    @media (min-width: 1200px) {
-      header h1 {
-        font-size: 6vw; 
-        letter-spacing: 2rem;
-      }
-    }
-
-    audio {
-      width: 100%;
-    }
-  </style>
-
-  <!-- Paste this right before your closing </head> tag -->
-<script type="text/javascript">
-  (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split( " "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for ( var d = {}, e = ["get_group"].concat( Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
-
-//Import Mixpanel SDK
-// import mixpanel from "mixpanel-browser";
- 
-// Near entry of your product, init Mixpanel
-mixpanel.init("372c78393bb6b85077f63964af7652f6", {
-  debug: true,
-  track_pageview: true,
-  persistence: "localStorage",
-});
-
-const urlParams = new URLSearchParams(window.location.search);
-const userEmail = urlParams.get('e');
-const userFirstName = urlParams.get('fname');
-const userLastName = urlParams.get('lname');
-
-
-mixpanel.identify(userEmail)
- 
-mixpanel.people.set({ 
-  '$email': userEmail,
-  '$fname': userFirstName,
-  '$lname': userLastName,
-// Add anything else about the user here
-});
-
-
-
-</script>
-
-
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+  <script type="text/javascript" src="javascript.js"></script>
 </head>
 
-<body onLoad="">
+<body class="access-denied">
   <div class="container">
-  <header>
-    <h1>Trackmarks</h1>
-  </header>
+    <header>
+      <h1>Trackmarks</h1>
+      <span>Posted by Joel Selvin & Tom Zito</span>
+      <div class="message" id="message"></div>
+    </header>
 
-<article>
-  <section>
-    <h2>About the authors</h2>
-    <audio controls="">
-      <source src="mp3/About_the_Authors.mp3" type="audio/mp3">
-      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/About_the_Authors.mp3">link to the audio</a>
-        instead.</p>
-    </audio>
-  </section>
-  <section>
-    <h2>Country Roads</h2>
-    <audio controls="">
-      <source src="mp3/Country_Roads.mp3" type="audio/mp3">
-      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Country_Roads.mp3">link to the audio</a>
-        instead.</p>
-    </audio>
-  </section>
-  <section>
-    <h2>Everybody's Talking</h2>
-    <audio controls="">
-      <source src="mp3/Everybodys_Talking.mp3" type="audio/mp3">
-      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Everybodys_Talking.mp3">link to the audio</a>
-        instead.</p>
-    </audio>
-  </section>
-  <section>
-    <h2>Good Vibrations</h2>
-    <audio controls="">
-      <source src="mp3/Good_Vibrations.mp3" type="audio/mp3">
-      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Good_Vibrations.mp3">link to the audio</a>
-        instead.</p>
-    </audio>
-  </section>
-  <section>
-    <h2>Stairway to Heaven</h2>
-    <audio controls="">
-      <source src="mp3/Stairway_to_Heaven.mp3" type="audio/mp3">
-      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Stairway_to_Heaven.mp3">link to the audio</a>
-        instead.</p>
-    </audio>
-  </section>
-  <section>
-    <h2>Whole Lotta Shakin</h2>
-    <audio controls="">
-      <source src="mp3/Whole_Lotta_Shakin.mp3" type="audio/mp3">
-      <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Whole_Lotta_Shakin.mp3">link to the audio</a>
-        instead.</p>
-    </audio>
-  </section>
+    <article>
+      <section>
+        <h2>Whole Lotta Shakin</h2>
+        <p>One of the original rock and roll classics came into the hands of Jerry Lee Lewis through a Memphis club
+          owner and he sang the song every night for the rest of his life.
+        </p>
+        <audio controls="">
+          <source src="mp3/Whole_Lotta_Shakin.mp3" type="audio/mp3">
+          <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Whole_Lotta_Shakin.mp3">link to the
+              audio</a>
+            instead.</p>
+        </audio>
+      </section>
+      <section>
+        <h2>Good Vibrations</h2>
+        <p>What could be the greatest pop record ever evolved over a tangled path of many months and dozens of recording
+          sessions.
+        </p>
+        <audio controls="">
+          <source src="mp3/Good_Vibrations.mp3" type="audio/mp3">
+          <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Good_Vibrations.mp3">link to the audio</a>
+            instead.</p>
+        </audio>
+      </section>
+      <section>
+        <h2>Stairway to Heaven</h2>
+        <p>Controversy surrounds the songs of Led Zeppelin, none more so than their signature classic hit from the ‘70s.
+        </p>
+        <audio controls="">
+          <source src="mp3/Stairway_to_Heaven.mp3" type="audio/mp3">
+          <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Stairway_to_Heaven.mp3">link to the
+              audio</a>
+            instead.</p>
+        </audio>
+      </section>
+      <section>
+        <h2>Country Roads</h2>
+        <p>Tom’s pals Bill and Taffy Danoff hooked up with John Denver for this gem, which may not have reached its full
+          potential until it was taken over by a Jamaican music great.</p>
+        <audio controls="">
+          <source src="mp3/Country_Roads.mp3" type="audio/mp3">
+          <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Country_Roads.mp3">link to the audio</a>
+            instead.</p>
+        </audio>
+      </section>
+      <section>
+        <h2>Not Fade Away
+        </h2>
+        <p>A Buddy Holly B-side that lived to become crucial repertoire for both the Rolling Stones and Grateful Dead.
+        </p>
+        <audio controls="">
+          <source src="mp3/Not_Fade_Away.mp3" type="audio/mp3">
+          <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Not_Fade_Away.mp3">link to the audio</a>
+            instead.</p>
+        </audio>
+      </section>
+      <section>
+        <h2>Everybody's Talking</h2>
+        <p>Fred Neil knocked off this song in fifteen minutes, anxious to leave the recording session, but it took Harry
+          Nilsson to knock it out of the park.
+        </p>
+        <audio controls="">
+          <source src="mp3/Everybodys_Talking.mp3" type="audio/mp3">
+          <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/Everybodys_Talking.mp3">link to the
+              audio</a>
+            instead.</p>
+        </audio>
+      </section>
 
-</article>
-<article>
-  <p>We’ve been locked in Joel’s basement now for months on end to create episodes of TrackMarks, and it’s getting a little musty in here.  Our theory is that all pop music revolves around songs, even more than albums and artists, and we’re picking ones we think deserve a close look.  You now belong to our test focus group. We need to know what you think. Please fill out the form below…</p>
+      <section>
+        <h2>About the authors</h2>
+        <p>Joel Selvin and Tom Zito first met at The Band’s seminal Last Waltz on Thanksgiving Day 1976, when they were
+          respectively writing about music for the San Francisco Chronicle and the Washington Post. They still have a
+          lot to say.
+        </p>
+        <audio controls="">
+          <source src="mp3/About_the_Authors.mp3" type="audio/mp3">
+          <p>Your browser doesn't support HTML5 audio. Here is a <a href="mp3/About_the_Authors.mp3">link to the
+              audio</a>
+            instead.</p>
+        </audio>
+      </section>
 
-  <!-- modify this form HTML and place wherever you want your form -->
-<form id="my-form" action="https://formspree.io/f/mkgjvrzn" method="POST">
-  <input type="text" name="name" placeholder="Your Name"/>
-  <input type="email" name="email" placeholder="Your Email"/>
-  <textarea name="message" placeholder="Tell us what you think"></textarea>
-  <button id="my-form-button">Submit</button>
-  <p id="my-form-status"></p>
-</form>
+    </article>
+    <article>
+      <p>We’ve been locked in Joel’s basement now for months on end to create episodes of TrackMarks, and it’s getting a
+        little musty in here. Our theory is that all pop music revolves around songs, even more than albums and artists,
+        and we’re picking ones we think deserve a close look. You now belong to our test focus group. We need to know
+        what you think. Please fill out the form below…</p>
 
-<!-- Place this script at the end of the body tag -->
-<script>
-  var form = document.getElementById("my-form");
-  
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
+      <!-- modify this form HTML and place wherever you want your form -->
+      <form id="my-form" action="https://formspree.io/f/mkgjvrzn" method="POST">
+        <input type="text" name="name" placeholder="Your Name" />
+        <input type="email" name="email" placeholder="Your Email" />
+        <textarea name="message" placeholder="Tell us what you think"></textarea>
+        <button id="my-form-button">Submit</button>
+        <p id="my-form-status"></p>
+      </form>
+    </article>
+  </div>
+
+  <div class="thing">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+
+  <!-- Place this script at the end of the body tag -->
+  <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
           'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        status.innerHTML = "Thanks for your submission!";
-        form.reset()
-      } else {
-        response.json().then(data => {
-          if (Object.hasOwn(data, 'errors')) {
-            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-          } else {
-            status.innerHTML = "Oops! There was a problem submitting your form"
-          }
-        })
-      }
-    }).catch(error => {
-      status.innerHTML = "Oops! There was a problem submitting your form"
-    });
-  }
-  form.addEventListener("submit", handleSubmit)
-</script>
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script>
 
-
-</article>
-</div>
-
-<div class="thing">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
 
 </body>
 
