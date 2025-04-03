@@ -35,6 +35,13 @@ function alertMessage(headline, message) {
     targetElement.appendChild(messageElement);
 }
 
+function populateForm() {
+    const nameInput = document.getElementById("nameInput");
+    const emailInput = document.getElementById("emailInput");
+    nameInput.value = localStorage.getItem('fname') + " " + localStorage.getItem('lname');
+    emailInput.value = localStorage.getItem('email');
+}
+
 window.addEventListener('DOMContentLoaded', init)
 
 function getSpreadsheetData(results) {
@@ -67,6 +74,7 @@ function getSpreadsheetData(results) {
             // alertMessage("ACCESS GRANTED", "User has localStorage, no urlParams, is Identified in Mixpanel, and in spreadsheet")
             console.log("ACCESS GRANTED", "User has localStorage, no urlParams, is Identified in Mixpanel, and in spreadsheet")
             document.body.classList.remove('access-denied');
+            populateForm()
         } else {
             alertMessage("ACCESS DENIED", "User has localStorage, no urlParams, and NOT spreadsheet")
             consoleMessage("ACCESS DENIED", "your localStorage value does not have access")
@@ -95,9 +103,12 @@ function getSpreadsheetData(results) {
                 // Add anything else about the user here
             });
             localStorage.setItem('email', userEmail);
+            localStorage.setItem('fname', userFirstName);
+            localStorage.setItem('lname', userLastName);
             // alertMessage("ACCESS GRANTED" , "User Created in Mixpanel, User is in Spreadsheet, locaStorage created")
-            console.log("ACCESS GRANTED" , "User Created in Mixpanel, User is in Spreadsheet, locaStorage created")
+            console.log("ACCESS GRANTED", "User Created in Mixpanel, User is in Spreadsheet, locaStorage created")
             document.body.classList.remove('access-denied');
+            populateForm()
         } else {
             alertMessage("ACCESS DENIED", "User is not authorized")
         }
@@ -114,14 +125,13 @@ function getSpreadsheetData(results) {
             mixPanelInit()
             mixpanel.identify(localStorage.getItem('email'))
             // alertMessage("ACCESS GRANTED, you are already identified as " + localStorage.getItem('email')+ ".  Please dont use this url anymore!")
-            console.log("ACCESS GRANTED, you are already identified as " + localStorage.getItem('email')+ ".  Please dont use this url anymore!")
+            console.log("ACCESS GRANTED, you are already identified as " + localStorage.getItem('email') + ".  Please dont use this url anymore!")
             document.body.classList.remove('access-denied');
+            populateForm()
         } else {
             alertMessage("ACCESS DENIED, " + localStorage.getItem('email') + " is not in authorized")
             console.log("ACCESS DENIED, " + localStorage.getItem('email') + " is not in authorized")
         }
-
-
 
     }
 
