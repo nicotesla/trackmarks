@@ -113,7 +113,7 @@ function getSpreadsheetData(results) {
         if (userInSpreadsheet) {
             mixPanelInit()
             mixpanel.identify(localStorage.getItem('email'))
-            alertMessage("ACCESS GRANTED, you are already identified as " + localStorage.getItem('email')+ ".  Please dont use this url anymore!")
+            // alertMessage("ACCESS GRANTED, you are already identified as " + localStorage.getItem('email')+ ".  Please dont use this url anymore!")
             console.log("ACCESS GRANTED, you are already identified as " + localStorage.getItem('email')+ ".  Please dont use this url anymore!")
             document.body.classList.remove('access-denied');
         } else {
