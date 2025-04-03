@@ -11,6 +11,7 @@ body {
     line-height: 1.5
 }
 
+
 body.access-denied article {
     display: none;
 }
@@ -61,7 +62,7 @@ header h1 {
 }
 section {
     /* border-top: 1px #666 solid; */
-    padding: 1rem 1rem 2rem;
+    padding: 1rem 1rem 3rem;
     max-width: 90%;
     margin: auto;
 }
@@ -95,7 +96,7 @@ textarea {
 }
 
 p {
-    margin: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
     line-height: 1.5
 }
 
